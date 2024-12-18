@@ -1,0 +1,133 @@
+main {
+    margin-top: 150px;
+    margin-left: 350px;
+}
+.status{
+    color: white;
+    margin-bottom:-20px ;
+}
+
+h1 {
+    font-size: 50px; /* Font size for the title */
+    color: white; /* Text color */
+}
+
+.typing {
+    border-right: 4px solid white; /* Cursor effect */
+    white-space: nowrap; /* Prevent text wrapping */
+    height: 70px;
+    display: block;
+    overflow: hidden; /* Hide overflow */
+    color:rgb(8, 209, 92) ;
+}
+
+/* Blinking cursor effect */
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent; /* Invisible cursor */
+    }
+    50% {
+        border-color: white; /* Visible cursor */
+    }
+}
+.desc{
+    margin-top: -25px;
+    color: white;
+    width: 690px;
+    line-height: 35px;
+    position: static;
+}
+
+.buttons{
+    margin-top: 45px;
+    margin-left:30px ;
+}
+.buttons ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    padding: 0; /* Remove default padding */
+}
+
+button:hover{
+    scale: 1.1;
+    background-color: rgb(0, 255, 106);
+    cursor: pointer;
+}
+
+.buttons ul li {
+    display: flex; /* Ensure the icon is centered */
+    align-items: center; /* Center the icon vertically */
+}
+
+.buttons a {
+    text-decoration: none; /* Remove underline from links */
+}
+
+.buttons ul li a i {
+    padding: 10px; /* Add padding for better spacing */
+    font-size: 24px;
+    color: rgb(8, 209, 92) !important; /* Icon color */
+    border: 0.5px solid rgb(8, 209, 92); /* Border color */
+    border-radius: 50%; /* Make the icon round */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center the icon horizontally */
+    align-items: center; /* Center the icon vertically */
+    width: 23px; /* Set a fixed width */
+    height: 23px; /* Set a fixed height */
+    transition:0.3s; /* Smooth transition for hover effect */
+}
+
+.buttons ul li a:hover i{
+    background-color: rgba(8, 209, 92, 0.1); /* Light background on hover */
+    scale: 1.1;
+}
+.download-btn {
+    color: rgb(8, 209, 92);
+    width: 170px;
+    height: 35px;
+    border: 0.5px solid rgb(8, 209, 92);
+    border-radius: 5px;
+    padding-left:15px ;
+    padding-top: 10px;
+    transition: 0.5s;
+}
+.download-btn i{
+    position: absolute;
+    margin-left: 10px;
+}
+.download-btn:hover {
+    background-color: rgba(8, 209, 92, 0.1); /* Light background on hover */
+    transform: scale(1.1); /* Scale effect on hover */
+    color: #08d15c; /* Change text color on hover */
+}
+
+.image {
+    width: 450px; /* Set the desired width */
+    height: 450px; /* Set the same height for a perfect circle */
+    overflow: hidden; /* Hide overflow to maintain circular shape */
+    border-radius: 50%; /* Make the container circular */
+    position: absolute; /* Position for absolute children */
+    margin-left: 780px;
+    margin-top: -500px;
+    border: none; /* Initial border */
+    pointer-events: none;
+}
+
+.image img {
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove bottom space */
+    border-radius: 50%; /* Ensure the image is also circular */
+    border: none;
+
+}
+.slide-out {
+    transform: translateX(-100%); /* Slide out to the left */
+}
+
+.slide-in {
+    transform: translateX(100%); /* Slide in from the right */
+}
+
+

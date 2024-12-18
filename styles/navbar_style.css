@@ -1,0 +1,148 @@
+* {
+    background-color: rgb(5, 26, 44);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.title {
+    color: white;
+    font: bold;
+    font-size: 30px;
+    position: absolute;
+    margin-top: -7px;
+    margin-left: 350px;
+}
+
+.title .circle {
+    width: 8px; 
+    height: 8px; 
+    background-color: rgb(8, 209, 92); 
+    border-radius: 50%;
+    position: absolute;
+    margin-left: 75px;
+    margin-top: -13px;
+}
+.navbar {
+    margin-top: 40px !important;
+    margin-left: 550px;
+}
+
+.navbar ul ,.btn-hire-me button{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    list-style: none;
+    padding: 0; /* Remove default padding */
+}
+
+.navbar ul li {
+    position: relative; /* Position relative for the pseudo-element */
+}
+
+.navbar ul li a ,.btn-hire-me button{
+    color: white;
+    text-decoration: none;
+    padding: 10px 0; /* Add some vertical padding */
+    transition: color 0.3s; /* Smooth transition for color */
+}
+.btn-hire-me button{
+    position: absolute;
+    background-color: rgb(8, 209, 92);
+    border: none;
+    border-radius: 5px;
+    width: 120px;
+    margin-left: 920px;
+    margin-top: -42px;
+    padding-top: 5px;
+    height: 32px;
+    transition: 0.4s;
+}
+
+.navbar ul li a:hover {
+    color: rgb(8, 209, 92); /* Change color to grass green on hover */
+}
+
+.navbar ul li a.active {
+    color: rgb(8, 209, 92); /* Keep the color as grass green when active */
+}
+
+.navbar ul li .home::after ,
+.navbar ul li .services::after,
+.navbar ul li .resume::after,
+.navbar ul li .contact::after,
+.navbar ul li .quiz::after,
+.navbar ul li .work::after{
+    content: ""; /* Create a pseudo-element */
+    display: block; /* Make it a block element */
+    width: 100%; /* Set width to 100% of the link */
+    height: 0; /* Start with height 0 */
+    background: white; /* Color of the underline */
+    position: absolute; /* Position it absolutely */
+    left: 0; /* Align it to the left */
+    bottom: -5px; /* Position it 5px below the link */
+    transition: height 0.3s ease; /* Transition for height */
+}
+
+.navbar ul li .home.active::after,
+.navbar ul li .services.active::after ,
+.navbar ul li .resume.active::after,
+.navbar ul li .contact.active::after,
+.navbar ul li .quiz::after,
+.navbar ul li .work::after{
+    height: 2px;
+ }
+
+
+ ::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+    height: 17px !important; /* Height of the scrollbar (for horizontal scrollbars) */
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(5, 26, 44); /* Background color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(8, 209, 92); /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(4, 236, 101); /* Color of the scrollbar thumb on hover */
+}
+
+.navbar-toggle {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navbar-items {
+        display: none; /* Hide navbar items by default */
+        flex-direction: column; /* Stack items vertically */
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        right: 0;
+        background-color: #333; /* Match header background */
+        z-index: 1; /* Ensure it appears above other content */
+    }
+
+    .navbar-items.active {
+        display: flex; /* Show items when active */
+    }
+
+    .navbar-toggle {
+        display: flex; /* Show hamburger menu */
+    }
+
+    .navbar-items ul {
+        flex-direction: column; /* Stack links vertically */
+        padding: 0; /* Remove padding */
+    }
+
+    .navbar-items li {
+        margin: 10px 0; /* Adjust margin for vertical spacing */
+    }
+
+}

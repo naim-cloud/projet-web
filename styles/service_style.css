@@ -1,0 +1,54 @@
+
+ .svg-text {
+    fill: none; /* No fill color */
+    stroke:white; /* Outline color */
+    stroke-width: 2; /* Outline thickness */
+}
+.cards{
+    width: 125px;
+    display: inline;
+    color: white;
+}
+.bi-dash-circle{
+    position: absolute;
+    color: white;
+    font-size: 50px;
+    margin-top: 50px;
+    margin-left: 350px;
+}
+
+.web-dev-card,.ui-ux-card {
+    width: 590px;
+    margin-left: 300px;
+    margin-top: 200px;
+    line-height: 30px;
+    border-bottom: 0.5px solid white !important;
+    transition: 0.3s;
+}
+.mob-dev-card,.seo-card{
+    position: absolute;
+    width: 570px;
+    margin-left: 1100px;
+    margin-top: -328px;
+    line-height: 30px;
+    border-bottom: 0.5px solid white !important;
+    transition: 0.3s;
+
+}
+.web-dev-card:hover,.mob-dev-card:hover,.seo-card:hover,.ui-ux-card:hover{
+    scale: 1.1;
+    cursor: pointer !important;;
+}
+
+.web-dev-card:hover .svg-text,.web-dev-card:hover h2,
+.mob-dev-card:hover .svg-text,.mob-dev-card:hover h2,
+.ui-ux-card:hover .svg-text,.ui-ux-card:hover h2,
+.seo-card:hover .svg-text,.seo-card:hover h2 {
+    color: rgb(8, 209, 92);
+    stroke:rgb(8, 209, 92);
+}
+button:hover{
+    scale: 1.1;
+    background-color: rgb(0, 255, 106);
+    cursor: pointer;
+}

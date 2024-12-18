@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="../styles/contact_style.css">
+    <link rel="stylesheet" href="../styles/navbar_style.css">
+    <link rel="stylesheet" href="../bootstrap/bootstrap-icons-1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../fonts/fontawesome-free-6.7.1-web/css/all.min.css">
+    <style>
+        .error {
+            color: red;
+            font-size: 12px;
+            display: none;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="title">Naim <div class="circle"></div></div>
+        <nav class="navbar">
+            <div class="navbar-items" id="index-page">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a class="contact active" href="contact.html">Contact</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                </ul>
+                <div class="btn-hire-me">
+                    <button>
+                        <a href="mailto:naimbenali666@gmail.com" style="background-color:rgb(8, 209, 92); text-decoration: none; color: white;">Hire Me</a>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="left_side">
+              
+                <div class="box">
+                    <h1>Let’s Work Together</h1>
+                    <p class="desc">
+                        "Whether you're looking to develop a website, create an app, or brainstorm new ideas, I'm here to help. Let's connect and turn your vision into a reality!"
+                    </p>
+                    <table>
+                        <tr>
+                            <td>
+                                <input type="text" id="firstname" placeholder="Firstname">
+                                <span id="firstname-error" class="error"><i class="bi bi-exclamation-triangle"></i>&nbsp;&nbsp;Firstname is required.</span>
+                            </td>
+                            <td>
+                                <input type="text" id="lastname" placeholder="Lastname">
+                                <span id="lastname-error" class="error"><i class="bi bi-exclamation-triangle"></i>&nbsp;&nbsp;Lastname is required.</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="margin-top: 40px !important;">
+                                <input type="email" id="email" placeholder="Email Address" >
+                                <span id="email-error" class="error"><i class="bi bi-exclamation-triangle"></i>&nbsp;&nbsp;Please enter a valid email.</span>
+                            </td>
+                            <td>
+                                <input type="tel" id="phone" placeholder="Phone Number">
+                                <span id="phone-error" class="error"><i class="bi bi-exclamation-triangle"></i>&nbsp;&nbsp;Phone number is required.</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <select id="service">
+                                    <option value="" selected>Select a service</option>
+                                    <option value="frontend">FrontEnd Developer</option>
+                                    <option value="backend">BackEnd Developer</option>
+                                    <option value="fullstack">FullStack Developer</option>
+                                    <option value="mobile">Mobile Developer</option>
+                                </select>
+                                <span id="service-error" class="error"><i class="bi bi-exclamation-triangle"></i> &nbsp;&nbsp;Please select a service.</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <textarea id="message" placeholder="Type your message here"></textarea>
+                                <span style="margin-top: -20px;" id="message-error" class="error"><i class="bi bi-exclamation-triangle"></i>&nbsp;&nbsp;Message is required.</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <button onclick="validateForm()" style="margin-top: 20px;"  >Send Message</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="right_side">
+                <div class="container">
+                    <div class="info-item">
+                        <div class="icon-container">
+                            <i class="bi bi-telephone-fill icon"></i>
+                        </div>
+                        <div>
+                            <p class="label">Phone</p>
+                            <p class="value">(+216) 99 054 694</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="icon-container">
+                            <i class="bi bi-envelope-fill icon"></i>
+                        </div>
+                        <div>
+                            <p class="label">Email</p>
+                            <p class="value">naimbenali666@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="icon-container">
+                            <i class="bi bi-geo-alt-fill icon"></i>
+                        </div>
+                        <div>
+                            <p class="label">Address</p>
+                            <p class="value">Tunis, Sfax, ElHencha 3010</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="/scripts/contact.js"></script>
+       
+    
+</body>
+</html>
